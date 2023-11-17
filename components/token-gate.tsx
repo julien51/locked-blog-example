@@ -32,6 +32,7 @@ const Checkout = () => {
   const checkout = () => {
     console.log(connector)
     const paywall = new Paywall(networks)
+    // @ts-expect-error
     const provider = connector!.provider
     console.log(paywall)
     paywall.connect(provider)
